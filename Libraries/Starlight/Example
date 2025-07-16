@@ -1,0 +1,89 @@
+local Starlight = loadstring(game:HttpGet("https://github.com/DocYogurt/Reincarnation/raw/refs/heads/main/Libraries/Starlight/Source"))()  
+--Credits to nebula softworks thing cuz i didnt make ts
+local NebulaIcons = loadstring(game:HttpGet("https://github.com/DocYogurt/Reincarnation/raw/refs/heads/main/Libraries/Starlight/Loader"))()
+
+local Window = Starlight:CreateWindow({
+    Name = "MyScript",
+    Subtitle = "v1.0",
+    Icon = 123456789,
+
+    LoadingSettings = {
+        Title = "My Script Hub",
+        Subtitle = "by You",
+    },
+
+    ConfigurationSettings = { -- Not Implemented Yet
+        FolderName = "MyScript"
+    },
+})
+
+local TabSection = Window:CreateTabSection("Tab Section")
+
+local Tab = TabSection:CreateTab({
+    Name = "Tab",
+    Icon = NebulaIcons:GetIcon('view_in_ar', 'Material'),
+    Columns = 2,
+}, "INDEX")
+
+local Groupbox = Tab:CreateGroupbox({
+    Name = "Groupbox",
+    Column = 1,
+}, "INDEX")
+
+local Button = Groupbox:CreateButton({
+    Name = "Button",
+    Icon = NebulaIcons:GetIcon('check', 'Material'),
+    Callback = function()
+
+    end,
+}, "INDEX")
+
+local Toggle = Groupbox:CreateToggle({
+    Name = "Toggle",
+    CurrentValue = false,
+    Style = 2,
+    Callback = function(Value)
+
+    end,
+}, "INDEX")
+
+local Slider = Groupbox:CreateSlider({
+    Name = "Slider",
+    Icon = NebulaIcons:GetIcon('bar-chart', 'Lucide'),
+    Range = {0,100},
+    Increment = 1,
+    Callback = function(Value)
+
+    end,
+}, "INDEX")
+
+local Input = Groupbox:CreateInput({
+    Name = "Dynamic Input",
+    Icon = NebulaIcons:GetIcon('text-cursor-input', 'Lucide'),
+    CurrentValue = "",
+    PlaceholderText = "Placeholder Text",
+    Callback = function(Text)
+
+    end,
+}, "INDEX")
+
+local Label = Groupbox:CreateButton({
+    Name = "Label"
+}, "INDEX")
+
+local Paragraph = Groupbox:CreateParagraph({
+    Name = "Paragraph",
+    Content = [[Content of your paragraph goes here. Lorem Ipsum Dolor Sit Amet. Lorem Ipsum Dolor Sit Amet. Lorem Ipsum Dolor Sit Amet. Lorem Ipsum Dolor Sit Amet. Lorem. Ipsum Dolor Sit Amet. Lorem Ipsum Dolor Sit Amet. Lorem Ipsum Dolor Sit Amet. 
+
+    Also Supports Multi Lining
+    ]]
+
+}, "INDEX")
+
+local Dropdown = Label:AddDropdown({
+    Options = {"Option 1", "Option 2"},
+    CurrentOptions = {"Option 1"},
+    Callback = function(Options)
+        
+    end,
+}, "INDEX")
