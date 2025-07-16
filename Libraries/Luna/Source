@@ -2262,7 +2262,7 @@ function Luna:CreateWindow(WindowSettings)
 
 	Main.Title.Title.Text = WindowSettings.Name
 	Main.Title.subtitle.Text = WindowSettings.Subtitle
-	Main.Logo.Image = "https://github.com/DocYogurt/Reincarnation/blob/main/Imgs/Star.png"
+	Main.Logo.Image = "https://raw.githubusercontent.com/DocYogurt/Reincarnation/refs/heads/main/Imgs/Star.png"
 	Main.Visible = true
 	Main.BackgroundTransparency = 1
 	Main.Size = MainSize
