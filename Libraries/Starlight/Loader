@@ -1,0 +1,14 @@
+local module = {}
+
+module.Material = loadstring(game:HttpGet("https://github.com/DocYogurt/Reincarnation/raw/refs/heads/main/Libraries/Starlight/MaterialIcons"))()
+module.Lucide = loadstring(game:HttpGet("hhttps://github.com/DocYogurt/Reincarnation/raw/refs/heads/main/Libraries/Starlight/LucideIcons"))()
+module.Phosphor = loadstring(game:HttpGet("https://github.com/DocYogurt/Reincarnation/raw/refs/heads/main/Libraries/Starlight/Phosphor"))()
+module["Phosphor-Filled"] = loadstring(game:HttpGet("https://github.com/DocYogurt/Reincarnation/raw/refs/heads/main/Libraries/Starlight/Phosphor%20Filled"))()
+
+function module:GetIcon(name, source)
+	source = source or "Material"
+
+	return module[source][name]
+end
+
+return module
