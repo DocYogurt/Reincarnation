@@ -1837,7 +1837,7 @@ end
 
 -- Interface Management
 local LunaUI = isStudio and script.Parent:WaitForChild("Luna UI") or game:GetObjects("rbxassetid://86467455075715")[1]
-
+LunaUI.MobileSupport.Interact.Text = "UI开关"
 local SizeBleh = nil
 
 local function Hide(Window, bind, notif)
@@ -1845,7 +1845,7 @@ local function Hide(Window, bind, notif)
 	bind = string.split(tostring(bind), "Enum.KeyCode.")
 	bind = bind[2]
 	if notif then
-		Luna:Notification({Title = "Interface Hidden", Content = "The interface has been hidden, you may reopen the interface by Pressing the UI Bind In Settings ("..tostring(bind)..")", Icon = "visibility_off"})
+		Luna:Notification({Title = "界面已隐藏", Content = "使用按键重新打开 ("..tostring(bind)..")", Icon = "visibility_off"})
 	end
 	tween(Window, {BackgroundTransparency = 1})
 	tween(Window.Elements, {BackgroundTransparency = 1})
